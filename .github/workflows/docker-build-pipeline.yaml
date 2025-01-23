@@ -1,5 +1,5 @@
 ---
-name: Run CI/CD Pipeline for different jobs
+name: Run CI/CD Pipeline for docker job
 on:
   push:
     branches:
