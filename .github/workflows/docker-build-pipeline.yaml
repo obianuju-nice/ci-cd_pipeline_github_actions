@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-and-push-docker-image:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest      # Specifies the runner (e.g., ubuntu-latest, windows-latest, or self-hosted
     steps:
 
       - name: Checkout code
@@ -29,7 +29,7 @@ jobs:
 
     # Push the Docker image to Docker Hub
       - name:  Push Docker Image to Docker Hub
-        # uses: docker/build-push-actions@v2
+        # uses: docker/build-push-actions@v2    Specifies dependencies, making jobs run sequentially
         run: |
           docker tag ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0 ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.1
