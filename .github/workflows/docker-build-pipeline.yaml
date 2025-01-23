@@ -6,8 +6,8 @@ on:
       # - main
       - cicd-pipeline
 
-  schedule:
-   - cron: "0 1 * * 4"
+  # schedule:
+  #  - cron: "0 1 * * 4"
 
 jobs:
   build-and-push-docker-image:
@@ -31,5 +31,5 @@ jobs:
       - name:  Push Docker Image to Docker Hub
         # uses: docker/build-push-actions@v2    Specifies dependencies, making jobs run sequentially
         run: |
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.1 ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.1
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.1
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0 ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0
