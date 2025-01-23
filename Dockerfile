@@ -1,4 +1,3 @@
-
 FROM nginx:latest
 WORKDIR /nginx-dir
 # Copy your custom HTML files to the container file system
