@@ -5,6 +5,10 @@ on:
     branches:
       # - main
       - cicd-pipeline
+
+  schedule:
+   - cron: "0 1 * * 4"
+
 jobs:
   build-and-push-docker-image:
     runs-on: ubuntu-latest
