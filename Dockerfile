@@ -1,7 +1,7 @@
 FROM nginx:latest
 WORKDIR /nginx-dir
 # Copy your custom HTML files to the container file system
-COPY index.html /usr/share/nginx/html
+COPY ./index.html /usr/share/nginx/html
 #  Expose port 80 for the web server
 EXPOSE 80
 # Start the Apache server
