@@ -26,7 +26,7 @@ jobs:
 
     # Push the Docker image to Docker Hub
       - name:  Push Docker Image to Docker Hub
-        uses: docker/build-push-actions@v2
+        # uses: docker/build-push-actions@v2
         run: |
           docker tag nickos-app ${{ secrets.DOCKERHUB_USERNAME }}/nickos-docker-image:latest 
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-docker-image:latest 
