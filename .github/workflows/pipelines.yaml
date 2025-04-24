@@ -12,7 +12,9 @@ on:
   push:
     branches:
     # - main
-      - cicd-pipeline      # specifies the branch where the job will run on
+  pull_request:
+    branches:
+      - cicd-pipeline    # specifies the branch where the job will run on
 
 # schedule:
 #  - cron: "0 21 * * 4"
