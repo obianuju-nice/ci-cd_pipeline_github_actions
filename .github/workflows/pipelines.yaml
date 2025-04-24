@@ -24,6 +24,9 @@ jobs:
   docker_job:
     name: docker job
     runs-on: ubuntu-latest      # Specifies the runner (e.g., ubuntu-latest, windows-latest, or self-hosted
+    defaults:
+     run:
+       working-directory: ./docker
     steps:
 
     - name: Checkout code
@@ -104,6 +107,9 @@ jobs:
   kubernetes_job:
     name: Kubernetes Job
     runs-on: ubuntu-latest
+    defaults:
+     run:
+       working-directory: ./kubernetes
     needs: terraform_job # Ensure this job runs after Terraform
 
     steps:
