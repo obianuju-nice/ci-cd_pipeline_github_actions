@@ -1,0 +1,21 @@
+name: Reusable Workflow for all yaml files
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        default: 'production'
+        type: string
+      version:
+        required: false
+        type: string
+
+jobs:
+  reusable-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Inputs
+        run: |
+          echo "Environment: ${{ inputs.environment }}"
+          echo "Version: ${{ inputs.version }}"
+

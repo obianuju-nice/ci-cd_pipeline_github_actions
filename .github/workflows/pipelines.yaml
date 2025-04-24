@@ -21,7 +21,7 @@ on:
 
 jobs:
   docker_job:
-    name: build-and-push-docker-image
+    name: docker job
     runs-on: ubuntu-latest      # Specifies the runner (e.g., ubuntu-latest, windows-latest, or self-hosted
     steps:
 
@@ -46,7 +46,7 @@ jobs:
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/nickos-website:v1.0.0
 
   terraform_job:
-    name: Deploy aws resources with terraform
+    name: terraform job
     runs-on: ubuntu-latest
     needs: docker_job
     steps:
