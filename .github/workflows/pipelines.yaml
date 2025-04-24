@@ -11,7 +11,7 @@ on:
         #   type: string
   push:
     branches:
-     - main
+    - main
   # pull_request:
   #   branches:
       # - cicd-pipeline    # specifies the branch where the job will run on
@@ -19,6 +19,8 @@ on:
 # schedule:
 #  - cron: "0 21 * * 4"
 
+  workflow_dispatch:       # LEt you run kobs manually inn the Actions tab in github.com
+  
 jobs:
   docker_job:
     name: docker job
