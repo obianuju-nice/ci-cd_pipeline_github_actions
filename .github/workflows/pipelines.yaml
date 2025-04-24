@@ -2,11 +2,11 @@ name:  CI-CD Pipeline Deployments
 on:
   # workflow_dispatch:
   #   inputs:
-  #     environment:
+      #  environment:
         #   required: true
         #   default: 'production'
         #   type: string
-        # version:
+        #version:
         #   required: false
         #   type: string
   push:
