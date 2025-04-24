@@ -10,8 +10,7 @@ on:
         #   required: false
         #   type: string
   push:
-    branches:
-    - main
+    branches: [ main ]
   # pull_request:
   #   branches:
       # - cicd-pipeline    # specifies the branch where the job will run on
